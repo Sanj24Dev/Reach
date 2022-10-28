@@ -36,10 +36,12 @@ def shell():
             _ = system('clear')
             userinput = input("Reach@user/Level"+str(level)+" : ")
             input_arr = userinput.split()
-            if(input_arr[0]==commands[0]):
+            if(input_arr[0]==commands[0]): #reach
                 chdir('level0')
                 system('cat readme.txt')
             
+            # creating a pipe for saving the clues for final level
+            r, w = os.pipe()
             
             # shell_help()        
         
@@ -55,7 +57,7 @@ def shell():
             #path = "mypipe"
             #mode = 0o777
             #os.mkfifo(path)
-
+            
             chdir('level1')
             level = 1
 
@@ -64,11 +66,16 @@ def shell():
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
         elif(input_arr[0] == commands[3]): # push
-            # with open("mypipe", "w") as f:
-                # f.write(input_arr[1])
+            c = input_arr[1]
+            c = c.encode("ascii")
+            os.write(w,c)
             level = level + 1
             lev = 'level'+str(level)
             chdir(lev)
+            if level == 5:
+                os.close(w)
+                r = os.fdopen(r)
+                print("FINAL answer ", r.read())
         elif(input_arr[0] == commands[4]): # open
             path = '//mnt//d//sem5//osproj//Reach//cmds//open.py'
             rel = os.path.relpath(path,cwd)

@@ -1,10 +1,35 @@
 
-    file systems - linking
-    Welcome to Level 2
 
-    hardLink src dest
-    softLink src dest
-    removeLink src
-    totalLink
+    Level 2: Labyrinth
+    DELVE IN THE DARKNESS OF THE ENDLESS MAZE
 
+        Welcome to the Labyrinth… 
+    There are a few entry doors(src) which are waiting to be linked with its exit doors(dst). There are two types of linking of doors – soft links and hard links. You will have to link the doors according to the conditions given below to find the reward. To do so, here are your commands
+    Command help
+    ------------
+    •	“softLink src dst” – forms soft links between entry and exit doors
+    •	“hardLink src dst ” – forms hard links between the entry and exit doors
+    •	“removeLink dst”—unlinks the doors
+    •	“totalLink”—gives the number of links 
+    •	“list”—lists the doors linked
+    Soft links ---- Doesn’t get added up in total number of links
+    Hard links ---- Gets added up in total number of links
+
+    Initial number of links --- 5
+    Total number of links at the end --- 8
+    Entry doors --- a.txt	b.txt	c.txt	d.txt	e.txt
+    Exit doors --- f.txt	g.txt	h.txt	i.txt	j.txt
+
+    Conditions on new links
+            Hard Links		Soft Links
+    a.txt		1			1
+    b.txt		0			2
+    c.txt		2			0
+    d.txt		0			0
+    e.txt		1			0
+
+    The reward is found behind a door. You will know it only after you complete the linking successfully.
     
+    Once you get the reward use “push #char” command to collect your reward and go to next level.
+    Best of Luck!!!
+

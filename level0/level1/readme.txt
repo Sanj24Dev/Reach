@@ -1,16 +1,18 @@
 
-    File management
 
-   Level 1
-   The clue you are searching for is the first letter of the file with max chars
-   
-   Command help
-   ------------
-   open filename
-   list
-   num filename
+    Level 1: Chamber of Scripts
+    YOU SHALL FIND WHAT YOU SEEK AND MAKE IT YOUR OWN
+        
+        Welcome to the Chamber of Scripts… 
+    There are a lot of scripts in here and what you need is hidden somewhere here. 
+    You will have to go through the scripts to find the reward. To do so, here are your commands
+    Command help
+    ------------
+    •	open filename – opens the script
+    •	list – lists the scripts in the chamber
+    •	num filename — counts the number of characters in the script 
 
-   Once you get the clue use "push #char" command to store your letter
-
-
+    The reward is in the script which has the maximum number of characters in it.
+    Once you get the reward use “push #char” command to collect your reward and go to next level.
+    Best of Luck!!!
 

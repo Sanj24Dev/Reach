@@ -10,12 +10,15 @@ commands = [
     "push",
     "open",
     "list",
-    "numChar",
+    "num",
 
     "hardLink",
     "softLink",
     "removeLink",
-    "totalLink"
+    "totalLink",
+
+    "build",
+    "check"
 ]
 
 def shell():
@@ -24,8 +27,6 @@ def shell():
     Function that runs the game.
 
     """
-    
-
 
     startup = 1
     from_cmd_error = 0
@@ -52,12 +53,7 @@ def shell():
         input_arr = userinput.split()
         cwd = getcwd()
         # print(cwd)
-        if(input_arr[0] == commands[1]):# begin
-            # pipe for IPC 
-            #path = "mypipe"
-            #mode = 0o777
-            #os.mkfifo(path)
-            
+        if(input_arr[0] == commands[1]):# begin           
             chdir('level1')
             level = 1
 
@@ -65,17 +61,22 @@ def shell():
             path = '//mnt//d//sem5//osproj//Reach//cmds//show.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
+
         elif(input_arr[0] == commands[3]): # push
             c = input_arr[1]
             c = c.encode("ascii")
             os.write(w,c)
             level = level + 1
             lev = 'level'+str(level)
+            _ = system('clear')
             chdir(lev)
             if level == 5:
                 os.close(w)
                 r = os.fdopen(r)
                 print("FINAL answer ", r.read())
+                print("Game over")
+                quit()
+
         elif(input_arr[0] == commands[4]): # open
             path = '//mnt//d//sem5//osproj//Reach//cmds//open.py'
             rel = os.path.relpath(path,cwd)
@@ -104,4 +105,13 @@ def shell():
             path = '//mnt//d//sem5//osproj//Reach//cmds//totalLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
+        elif(input_arr[0] == commands[11]): #build
+            path = '//mnt//d//sem5//osproj//Reach//cmds//l4.py'
+            rel = os.path.relpath(path,cwd)
+            system('python3 ' + rel)
+        elif(input_arr[0] == commands[12]): #check
+            path = '//mnt//d//sem5//osproj//Reach//cmds//check.py'
+            rel = os.path.relpath(path,cwd)
+            system('python3 ' + rel + " " + input_arr[1])
+            print("Open file a.txt to get the next letter")
 shell()

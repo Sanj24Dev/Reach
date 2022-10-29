@@ -1,4 +1,15 @@
 
-    Level 3
 
-    using fifo
+    Level 3: Crumbling Bridge
+    DESPAIR FOR YOUR LIFE RECKON ON STONE
+
+        Welcome to the Crumbling Bridge… 
+    The river has to be crossed but the bridge has already fallen apart. You will have to rebuild it and reach the other bank to collect the reward. This bridge is cursed; hence it crumbles after a certain time once its construction begins. You need to race against the time and the curse to cross the bridge. To do so, here are your commands
+    Command help
+    ------------
+    •	build - to start building the bridge
+    
+    The reward is in the treasure trunk on the other side of the bank, which will open when you reach it.
+    Once you get the reward use “push #char” command to collect your reward and go to next level.
+    Best of Luck!!!
+

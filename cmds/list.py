@@ -3,6 +3,6 @@ import time
 
 def cumtom_command_function():
     cwd = getcwd()
-    system('ls ' + cwd)
+    system('ls *.txt ')
 
 cumtom_command_function()

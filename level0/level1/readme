@@ -13,6 +13,6 @@
     •	num filename — counts the number of characters in the script 
 
     The reward is in the script which has the maximum number of characters in it.
-    Once you get the reward use “push #char” command to collect your reward and go to next level.
+    Once you get the reward use “push char” command to collect your reward and go to next level.
     Best of Luck!!!
 

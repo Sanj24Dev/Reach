@@ -18,7 +18,7 @@ rele = os.path.relpath(e,cwd)
 
 
 n = os.stat(rela).st_nlink + os.stat(relb).st_nlink + os.stat(relc).st_nlink + os.stat(reld).st_nlink + os.stat(rele).st_nlink
-print("Total links : ")
+print("Total links in the labyrinth: ")
 print(n)
 if n == 8:
     print("\nYayy!! YOu have successfully created 8 links. \nTo get out of the maze open a.txt\n")

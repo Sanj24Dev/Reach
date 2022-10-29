@@ -12,10 +12,10 @@ commands = [
     "list",
     "num",
 
-    "hardLink",
-    "softLink",
-    "removeLink",
-    "totalLink",
+    "real",
+    "img",
+    "remove",
+    "total",
 
     "build",
     "check"
@@ -35,7 +35,7 @@ def shell():
         if startup == 1:
             startup = startup + 1
             _ = system('clear')
-            userinput = input("Reach@user/Level"+str(level)+" : ")
+            userinput = input("\nReach@user/Level"+str(level)+" : ")
             input_arr = userinput.split()
             if(input_arr[0]==commands[0]): #reach
                 chdir('level0')
@@ -47,7 +47,7 @@ def shell():
             # shell_help()        
         
         if (from_cmd_error == 0):
-            userinput = input("Reach@user/Level"+str(level)+" : ")
+            userinput = input("\nReach@user/Level"+str(level)+" : ")
             pass
         
         input_arr = userinput.split()
@@ -81,39 +81,48 @@ def shell():
             path = '//mnt//d//sem5//osproj//Reach//cmds//open.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
+
         elif(input_arr[0] == commands[5]):  # list
             path = '//mnt//d//sem5//osproj//Reach//cmds//list.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
+
         elif(input_arr[0] == commands[6]): #num
             path = '//mnt//d//sem5//osproj//Reach//cmds//numChar.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
-        elif(input_arr[0] == commands[7]): #hardlink
+
+        elif(input_arr[0] == commands[7]): #real
             path = '//mnt//d//sem5//osproj//Reach//cmds//hardLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
-        elif(input_arr[0] == commands[8]): #softlink
+
+        elif(input_arr[0] == commands[8]): #img
             path = '//mnt//d//sem5//osproj//Reach//cmds//softLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
-        elif(input_arr[0] == commands[9]): #removeLink
+
+        elif(input_arr[0] == commands[9]): #remove
             path = '//mnt//d//sem5//osproj//Reach//cmds//removeLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
+
         elif(input_arr[0] == commands[10]): #total
             path = '//mnt//d//sem5//osproj//Reach//cmds//totalLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
+
         elif(input_arr[0] == commands[11]): #build
             path = '//mnt//d//sem5//osproj//Reach//cmds//l4.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
+
         elif(input_arr[0] == commands[12]): #check
             path = '//mnt//d//sem5//osproj//Reach//cmds//check.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
             print("Open file a.txt to get the next letter")
-
-
+            
+        else:
+            print("Oops! It is a wrong command. Type the correct command.")
 shell()

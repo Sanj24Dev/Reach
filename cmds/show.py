@@ -3,6 +3,6 @@ import time
 import sys
 
 def cumtom_command_function():
-    system('cat readme.txt')
+    system('cat readme')
 
 cumtom_command_function()

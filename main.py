@@ -114,4 +114,6 @@ def shell():
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
             print("Open file a.txt to get the next letter")
+
+
 shell()

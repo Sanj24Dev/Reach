@@ -11,8 +11,8 @@
     ------------
     •	img src dst – forms soft links between entry and exit doors
     •	real src dst  – forms hard links between the entry and exit doors
-    •	removeLink dst —unlinks the doors
-    •	totalLink —gives the number of links 
+    •	remove dst —unlinks the doors
+    •	total —gives the number of links 
     •	list —lists the doors linked
     Soft links ---- Doesn’t get added up in total number of links
     Hard links ---- Gets added up in total number of links

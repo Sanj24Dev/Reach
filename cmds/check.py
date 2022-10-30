@@ -3,6 +3,7 @@ import sys
 
 def cumtom_command_function():
     opt = sys.argv[1]
+    f = 0
     if opt == "a":
         processes = 5
         resources = 4
@@ -26,11 +27,9 @@ def cumtom_command_function():
     for i in range(processes):
         for j in range(resources):
             allocated[j] += currently_allocated[i][j]
-    print(f"\ntotal allocated resources : {allocated}")
-
+    
     available = [max_resources[i] - allocated[i] for i in range(resources)]
-    print(f"total available resources : {available}\n")
-
+   
     running = [True] * processes
     count = processes
     while count != 0:
@@ -43,7 +42,7 @@ def cumtom_command_function():
                         executing = False
                         break
                 if executing:
-                    print(f"Check door {i + 1}")
+                    print(f" Check door {i + 1}")
                     running[i] = False
                     count -= 1
                     safe = True
@@ -51,9 +50,12 @@ def cumtom_command_function():
                         available[j] += currently_allocated[i][j]
                     break
         if not safe:
-            print("Door doesnt open")
+            print("\n Door doesnt open. Try another option.\n")
+            f = 1
             break
 
-        print(f" Door opened\n")
+        print("\n Door opened")
 
+    if count == 0:
+        print("\n Open file a.txt to get the next letter\n")
 cumtom_command_function()

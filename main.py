@@ -4,7 +4,7 @@ import time
 
 
 commands = [
-    "reach",
+    "play",
     "begin",
     "show",
     "push",
@@ -18,8 +18,13 @@ commands = [
     "total",
 
     "build",
-    "check"
+    "check",
+
+    "quit"
 ]
+
+h=0
+l=0
 
 def shell():
 
@@ -37,9 +42,9 @@ def shell():
             _ = system('clear')
             userinput = input("\nReach@user/Level"+str(level)+" : ")
             input_arr = userinput.split()
-            if(input_arr[0]==commands[0]): #reach
+            if(input_arr[0]==commands[0]): #play
                 chdir('level0')
-                system('cat readme.txt')
+                system('cat readme')
             
             # creating a pipe for saving the clues for final level
             r, w = os.pipe()
@@ -64,18 +69,31 @@ def shell():
 
         elif(input_arr[0] == commands[3]): # push
             c = input_arr[1]
-            c = c.encode("ascii")
-            os.write(w,c)
-            level = level + 1
-            lev = 'level'+str(level)
-            _ = system('clear')
-            chdir(lev)
-            if level == 5:
-                os.close(w)
-                r = os.fdopen(r)
-                print("FINAL answer ", r.read())
-                print("Game over")
-                quit()
+            if level == 1 and c != "F":
+                print("Wrong letter!! Try again")
+                # continue
+            elif level == 2 and c != "O":
+                print("Wrong letter!! Try again")
+                # continue
+            elif level == 3 and c != "R":
+                print("Wrong letter!! Try again")
+                # continue
+            elif level == 4 and c != "T":
+                print("Wrong letter!! Try again")
+                # continue
+            else:
+                c = c.encode("ascii")
+                os.write(w,c)
+                level = level + 1
+                lev = 'level'+str(level)
+                _ = system('clear')
+                chdir(lev)
+                if level == 5:
+                    os.close(w)
+                    r = os.fdopen(r)
+                    print("FINAL answer ", r.read())
+                    print("Game over")
+                    quit()
 
         elif(input_arr[0] == commands[4]): # open
             path = '//mnt//d//sem5//osproj//Reach//cmds//open.py'
@@ -93,14 +111,16 @@ def shell():
             system('python3 ' + rel + " " + input_arr[1])
 
         elif(input_arr[0] == commands[7]): #real
+            h=h+1
             path = '//mnt//d//sem5//osproj//Reach//cmds//hardLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + h)
 
         elif(input_arr[0] == commands[8]): #img
+            l=l+1
             path = '//mnt//d//sem5//osproj//Reach//cmds//softLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + l)
 
         elif(input_arr[0] == commands[9]): #remove
             path = '//mnt//d//sem5//osproj//Reach//cmds//removeLink.py'
@@ -113,7 +133,7 @@ def shell():
             system('python3 ' + rel)
 
         elif(input_arr[0] == commands[11]): #build
-            path = '//mnt//d//sem5//osproj//Reach//cmds//l4.py'
+            path = '//mnt//d//sem5//osproj//Reach//cmds//build.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
 
@@ -121,8 +141,10 @@ def shell():
             path = '//mnt//d//sem5//osproj//Reach//cmds//check.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
-            print("Open file a.txt to get the next letter")
-            
+
+        elif(input_arr[0] == commands[13]): #quit
+            quit()
+
         else:
             print("Oops! It is a wrong command. Type the correct command.")
 shell()

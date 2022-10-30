@@ -92,7 +92,7 @@ def shell():
                     os.close(w)
                     r = os.fdopen(r)
                     print("\n\n\n  FINAL answer ", r.read())
-                    print("  Game over")
+                    print("  Yaay!! You've reached the fort. Game over")
                     quit()
 
         elif(input_arr[0] == commands[4]): # open

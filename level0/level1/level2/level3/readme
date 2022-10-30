@@ -1,15 +1,20 @@
 
 
-    Level 3: Crumbling Bridge
+    Level 3: Deserted Overpass
     DESPAIR FOR YOUR LIFE RECKON ON STONE
 
-        Welcome to the Crumbling Bridge… 
-    The river has to be crossed but the bridge has already fallen apart. You will have to rebuild it and reach the other bank to collect the reward. This bridge is cursed; hence it crumbles after a certain time once its construction begins. You need to race against the time and the curse to cross the bridge. To do so, here are your commands
+        Welcome to the Deserted Overpass… 
+    The river has to be crossed but the bridge has already fallen apart. You will have to rebuild it and reach the other bank to collect the reward. This bridge is dominated by a Demon; it keeps destroying the bridge. You need to race against the Demon to cross the bridge. To do so, here are your commands
+
     Command help
     ------------
-    •	build - to start building the bridge
-    
-    The reward is in the treasure trunk on the other side of the bank, which will open when you reach it.
+    •	Build – to start with the building process
+    Once you start building the bridge it will tell you how many more blocks are needed to build the bridge. The bridge is completed if the number of blocks laid is equal to or more than 5. 
+
+    The number of blocks you can lay in one go is between 0 to 9 only.
+    The reward is in the treasure trunk on the other side of the bank. Open it when you know where it is.
+
+    open filename – opens the treasure trunk
     Once you get the reward use “push char” command to collect your reward and go to next level.
     Best of Luck!!!
 

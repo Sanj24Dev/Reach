@@ -83,7 +83,7 @@ class Consumer(threading.Thread):
       if(count>=5):
         #print("BUILD ", 0, "TO WIN")
         print("\nHURRAY!!! YOU'VE DEFEATED THE DEMON, YOU'RE ON THE OTHER SIDE")
-        print("Your letter is R")
+        print("Open a.txt")
       else:
         print("\nDON'T LOSE HOPE, BUILD ", 5-count, "TO WIN")
       arr = [0 for i in range(count)]

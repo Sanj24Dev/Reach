@@ -91,8 +91,8 @@ def shell():
                 if level == 5:
                     os.close(w)
                     r = os.fdopen(r)
-                    print("FINAL answer ", r.read())
-                    print("Game over")
+                    print("\n\n\n  FINAL answer ", r.read())
+                    print("  Game over")
                     quit()
 
         elif(input_arr[0] == commands[4]): # open

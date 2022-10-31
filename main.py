@@ -92,7 +92,7 @@ def shell():
                     os.close(w)
                     r = os.fdopen(r)
                     print("\n\n\n  FINAL answer ", r.read())
-                    print("  Yaay!! You've reached the fort. Game over")
+                    print("  Yaay!! You've reached the fort. Game over\n\n\n")
                     quit()
 
         elif(input_arr[0] == commands[4]): # open
@@ -111,16 +111,14 @@ def shell():
             system('python3 ' + rel + " " + input_arr[1])
 
         elif(input_arr[0] == commands[7]): #real
-            h=h+1
             path = '//mnt//d//sem5//osproj//Reach//cmds//hardLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + h)
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] )
 
         elif(input_arr[0] == commands[8]): #img
-            l=l+1
             path = '//mnt//d//sem5//osproj//Reach//cmds//softLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + l)
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
 
         elif(input_arr[0] == commands[9]): #remove
             path = '//mnt//d//sem5//osproj//Reach//cmds//removeLink.py'

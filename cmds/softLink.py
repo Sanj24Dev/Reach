@@ -19,6 +19,6 @@ n = os.stat(src).st_nlink
 print(n)
 
 cwd = getcwd()
-path = '//mnt//d//sem5//osproj//Reach//cmds//totalLink.py'
+path = sys.argv[3] + '//cmds//totalLink.py'
 rel = os.path.relpath(path,cwd)
-system('python3 ' + rel)
+system('python3 ' + rel + " " + sys.argv[3])

@@ -6,7 +6,7 @@ import time
 commands = [
     "play",
     "begin",
-    "show",
+    "scroll",
     "push",
     
     "open",
@@ -117,12 +117,12 @@ def shell():
         elif(input_arr[0] == commands[7]): #real
             path = cmdDir + '//cmds//hardLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] )
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + cmdDir)
 
         elif(input_arr[0] == commands[8]): #img
             path = cmdDir + '//cmds//softLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2])
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + cmdDir)
 
         elif(input_arr[0] == commands[9]): #remove
             path = cmdDir + '//cmds//removeLink.py'
@@ -132,7 +132,7 @@ def shell():
         elif(input_arr[0] == commands[10]): #total
             path = cmdDir + '//cmds//totalLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel)
+            system('python3 ' + rel + " " + cmdDir)
 
         elif(input_arr[0] == commands[11]): #build
             path = cmdDir + '//cmds//build.py'

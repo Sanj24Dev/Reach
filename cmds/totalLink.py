@@ -4,11 +4,11 @@ from os import *
  
 # Source file path
 cwd = getcwd()
-a = '//mnt//d//sem5//osproj//Reach//level0//level1//level2//a.txt'
-b = '//mnt//d//sem5//osproj//Reach//level0//level1//level2//b.txt'
-c = '//mnt//d//sem5//osproj//Reach//level0//level1//level2//c.txt'
-d = '//mnt//d//sem5//osproj//Reach//level0//level1//level2//d.txt'
-e = '//mnt//d//sem5//osproj//Reach//level0//level1//level2//e.txt'
+a = sys.argv[1] + '//level0//level1//level2//a.txt'
+b = sys.argv[1] + '//level0//level1//level2//b.txt'
+c = sys.argv[1] + '//level0//level1//level2//c.txt'
+d = sys.argv[1] + '//level0//level1//level2//d.txt'
+e = sys.argv[1] + '//level0//level1//level2//e.txt'
 
 rela = os.path.relpath(a,cwd)
 relb = os.path.relpath(b,cwd)

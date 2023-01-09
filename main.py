@@ -39,6 +39,8 @@ def shell():
 
     # change the cmdDir variable to hold the path of the game directory
     cmdDir = '//mnt//d//sem5//osproj//Reach'
+
+    
     level = 0  #incremented in push function
     while 1:
         if startup == 1:

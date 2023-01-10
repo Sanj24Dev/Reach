@@ -37,10 +37,10 @@ def shell():
     startup = 1
     from_cmd_error = 0
 
-    # change the cmdDir variable to hold the path of the game directory
-    cmdDir = '//mnt//d//sem5//osproj//Reach'
+    # change the projDir variable to hold the path of the game directory
+    projDir = '//mnt//d//sem5//osproj//Reach'
 
-    
+
     level = 0  #incremented in push function
     while 1:
         if startup == 1:
@@ -69,7 +69,7 @@ def shell():
             level = 1
 
         elif(input_arr[0] == commands[2]): # show
-            path = cmdDir + '//cmds//show.py'
+            path = projDir + '//cmds//show.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
 
@@ -102,47 +102,47 @@ def shell():
                     quit()
 
         elif(input_arr[0] == commands[4]): # open
-            path = cmdDir + '//cmds//open.py'
+            path = projDir + '//cmds//open.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
 
         elif(input_arr[0] == commands[5]):  # list
-            path = cmdDir + '//cmds//list.py'
+            path = projDir + '//cmds//list.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
 
         elif(input_arr[0] == commands[6]): #num
-            path = cmdDir + '//cmds//numChar.py'
+            path = projDir + '//cmds//numChar.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
 
         elif(input_arr[0] == commands[7]): #real
-            path = cmdDir + '//cmds//hardLink.py'
+            path = projDir + '//cmds//hardLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + cmdDir)
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + projDir)
 
         elif(input_arr[0] == commands[8]): #img
-            path = cmdDir + '//cmds//softLink.py'
+            path = projDir + '//cmds//softLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + cmdDir)
+            system('python3 ' + rel + " " + input_arr[1] + " " + input_arr[2] + " " + projDir)
 
         elif(input_arr[0] == commands[9]): #remove
-            path = cmdDir + '//cmds//removeLink.py'
+            path = projDir + '//cmds//removeLink.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
 
         elif(input_arr[0] == commands[10]): #total
-            path = cmdDir + '//cmds//totalLink.py'
+            path = projDir + '//cmds//totalLink.py'
             rel = os.path.relpath(path,cwd)
-            system('python3 ' + rel + " " + cmdDir)
+            system('python3 ' + rel + " " + projDir)
 
         elif(input_arr[0] == commands[11]): #build
-            path = cmdDir + '//cmds//build.py'
+            path = projDir + '//cmds//build.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel)
 
         elif(input_arr[0] == commands[12]): #check
-            path = cmdDir + '//cmds//check.py'
+            path = projDir + '//cmds//check.py'
             rel = os.path.relpath(path,cwd)
             system('python3 ' + rel + " " + input_arr[1])
 

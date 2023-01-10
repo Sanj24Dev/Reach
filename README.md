@@ -15,7 +15,7 @@
 - Enter `play`
 - A *scroll* will be displayed. Follow the intructions in the scroll to begin playing
 
-# Operating Systems concepts used
+# Operating System concepts used
     Level 1 - File handling operations (basic bash commands)
     Level 2 - File systems (soft links, hard links)
     Level 3 - Producer-Consumer problem with bounded buffer (multithreading, synchronisation)

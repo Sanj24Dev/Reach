@@ -23,4 +23,4 @@
     Collecting letters every level - Pipe (Interprocess communication)
     
 # Contributors
-The Sea Shell was built by a team of five people including [Sanjana Ganesh Nayak](https://github.com/Sanj24Dev), [Chitra A C](https://github.com/chitraac07), [Adeesh Jain](https://github.com/Lyricwheel5), [Rohan Prasad](https://github.com/xrohan13), and [Lovely Pangotra](https://github.com/lovelypangotra2003)
+The game was built by a team of five people including [Sanjana Ganesh Nayak](https://github.com/Sanj24Dev), [Chitra A C](https://github.com/chitraac07), [Adeesh Jain](https://github.com/Lyricwheel5), [Rohan Prasad](https://github.com/xrohan13), and [Lovely Pangotra](https://github.com/lovelypangotra2003)
